@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.MainActivity">
+
+    <Button
+        android:id="@+id/example_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:onClick="toChatActivity"
+        android:text="示例" />
+
+    <Button
+        android:id="@+id/image_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/example_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="toImageActivity"
+        android:text="进入图片展示" />
+
+    <Button
+        android:id="@+id/note_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="toNoteActivity"
+        android:text="进入记事本" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="toProxyActivity"
+        android:text="进入天气" />
+</RelativeLayout>

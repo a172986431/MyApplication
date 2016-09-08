@@ -1,0 +1,13 @@
+package com.x.pb.proto;
+
+
+option java_package = "com.a.pb.proto";
+option java_outer_classname = "ChatMsg";
+
+message ChatMessage  {
+	required string un = 1;
+	required string mi = 2;
+	required int32 ct = 3;
+    required string msg = 4;
+
+}

@@ -1,0 +1,21 @@
+package com.x.pb.proto;  
+
+
+option java_package = "com.a.pb.proto";
+option java_outer_classname = "MsgProbuf"; 
+  
+message Msg  {  
+	required MsgHead msghead = 1;
+	required string msgbody = 2;
+	
+	message MsgHead {
+		required string command = 1;
+		required string extras = 2;
+	}
+
+	message elang {
+	required string name = 1;
+	required string age = 2;
+	optional string sex = 3;
+	}
+}  

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/addImage_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="addImage"
+        android:textColor="#ffff0000"
+        android:text="添加一张图片"/>
+    <Button
+        android:id="@+id/likeTimer_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/addImage_bt"
+        android:layout_margin="10dp"
+        android:onClick="likeTimer"
+        android:textColor="#ffff0000"
+        android:text="时钟"/>
+    <Button
+        android:id="@+id/getImageUrl_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/likeTimer_bt"
+        android:layout_margin="10dp"
+        android:onClick="getImageUrl"
+        android:textColor="#ffff0000"
+        android:text="网络请求"/>
+    <GridView
+        android:id="@+id/image_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/addImage_bt"
+        android:numColumns="3"
+        android:cacheColorHint="#0000"
+        android:listSelector="#00000000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"/>
+</RelativeLayout>
