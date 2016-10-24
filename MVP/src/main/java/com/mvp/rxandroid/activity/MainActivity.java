@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 //        IHello realHello = (IHello) new DynamicProxy().bind(new RealHello(),new DynamicProxy());
 //        realHello.sayHello();
         Intent intent = new Intent(mContext, CityListActivity.class);
-
         startActivity(intent);
     }
 
