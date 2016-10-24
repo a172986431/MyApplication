@@ -13,6 +13,8 @@ import com.google.gson.TypeAdapter;
 import com.mvp.rxandroid.R;
 import com.mvp.rxandroid.activity.NoteBook.NoteActivity;
 import com.mvp.rxandroid.activity.chat.ChatActivity;
+import com.mvp.rxandroid.activity.contact.ContactActivity;
+import com.mvp.rxandroid.activity.contact.ContactInfo;
 import com.mvp.rxandroid.activity.imageshow.ImageShowActivity;
 import com.mvp.rxandroid.activity.weather.CityListActivity;
 import com.mvp.rxandroid.bean.CityListBean;
@@ -82,6 +84,15 @@ public class MainActivity extends AppCompatActivity {
 //        IHello realHello = (IHello) new DynamicProxy().bind(new RealHello(),new DynamicProxy());
 //        realHello.sayHello();
         Intent intent = new Intent(mContext, CityListActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转点击事件
+     * @param view
+     */
+    public void toContactActivity(View view){
+        Intent intent = new Intent(mContext, ContactActivity.class);
         startActivity(intent);
     }
 

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:onClick="toChatActivity"
         android:text="示例" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/example_bt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:onClick="toImageActivity"
         android:text="进入图片展示" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image_bt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:onClick="toNoteActivity"
         android:text="进入记事本" />
 
@@ -43,7 +43,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/note_bt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:onClick="toProxyActivity"
-        android:text="进入天气" />
+        android:text="进入天气"
+        android:id="@+id/button" />
+
+    <Button
+        android:text="进入联系人"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_bt"
+        android:layout_below="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:onClick="toContactActivity"
+        android:layout_marginTop="15dp" />
 </RelativeLayout>

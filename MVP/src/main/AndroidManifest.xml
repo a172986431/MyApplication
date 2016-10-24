@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 访问联系人的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".app.MvpApp"
@@ -36,6 +38,7 @@
         <activity android:name=".activity.NoteBook.NoteActivity" />
         <activity android:name=".activity.ProxyActivity" />
         <activity android:name=".activity.weather.CityListActivity" />
+        <activity android:name=".activity.contact.ContactActivity" />
 
         <!-- 添加报告分析的服务和自定义界面样式  -->
         <service
