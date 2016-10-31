@@ -54,6 +54,7 @@ dependencies {
     compile(name: 'AlimeiSDKLib', ext: 'aar')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:recyclerview-v7:23.0.0'
+    compile 'com.android.support:design:23.2.0'
     compile 'jp.wasabeef:recyclerview-animators:2.2.3'
     //RxAndroid的引用包
     compile 'io.reactivex:rxandroid:1.1.0'
