@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@mipmap/login_bg_img">
+    android:layout_height="match_parent">
+    <com.mvp.rxandroid.views.GameMoveBg
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="搜索联系人"
+        android:background="@android:color/transparent"
         android:id="@+id/editText" />
 
     <Button
         android:text="搜索"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="15dp"
         android:onClick="queryContact"
         android:id="@+id/button2" />
-</LinearLayout>
+</RelativeLayout>
