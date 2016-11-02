@@ -68,7 +68,7 @@ public class GameMoveBg extends SurfaceView implements SurfaceHolder.Callback, R
     private void initGame() {
         // 加载游戏资源
         bmpBackGround = BitmapFactory
-                .decodeResource(res, R.drawable.contact_bg);
+                .decodeResource(res, R.mipmap.login_bg_img);
 
         gameBg = new GameBg(bmpBackGround,false);
 
