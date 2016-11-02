@@ -28,7 +28,7 @@ public class GameBg {
    bg2x = 0;
   }else {
    bg1x = -Math.abs(bmpBackGround.getWidth() - GameMoveBg.screenW);
-   bg2x = bg1x - bmpBackGround1.getWidth() + 50;
+   bg2x = bg1x - bmpBackGround1.getWidth() + 3;
    bg1y = 0;
    bg2y = 0;
   }
@@ -56,10 +56,10 @@ public class GameBg {
   bg2x +=speed;
 
   if(bg1x > GameMoveBg.screenW){
-   bg1x = bg2x - bmpBackGround1.getWidth() +50;
+   bg1x = bg2x - bmpBackGround1.getWidth() +3;
   }
   if(bg2x > GameMoveBg.screenW){
-   bg2x = bg1x - bmpBackGround1.getWidth() +50;
+   bg2x = bg1x - bmpBackGround1.getWidth() +3;
   }
  }
  
