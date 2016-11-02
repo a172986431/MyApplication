@@ -1,4 +1,4 @@
-package com.mvp.rxandroid.views;
+package com.mvp.rxandroid.widgets.gamebg;
 
 import android.content.Context;
 import android.content.res.Resources;

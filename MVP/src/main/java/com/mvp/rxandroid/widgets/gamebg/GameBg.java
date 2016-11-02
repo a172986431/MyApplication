@@ -1,4 +1,4 @@
-package com.mvp.rxandroid.views;
+package com.mvp.rxandroid.widgets.gamebg;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
