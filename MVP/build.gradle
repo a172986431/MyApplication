@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.mvp.rxandroid"
-        minSdkVersion 17
+        minSdkVersion 13
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"

@@ -24,7 +24,7 @@ public class MvpApp extends Application{
         super.onCreate();
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         screenWidth = wm.getDefaultDisplay().getWidth();
-        AlimeiSDKManager.test();
+//        AlimeiSDKManager.test();
         // 初始化内存泄露检测
         mRefWatcher = installLeakCanary();
     }
