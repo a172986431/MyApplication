@@ -25,11 +25,11 @@ import java.util.List;
 public class ContactPresenter {
 
     // ----------------得到本地联系人信息-------------------------------------
-    public List<ContactInfo> getLocalContactsInfos(List<ContactInfo> contactInfos,String key) {
+    public List<ContactInfo> getLocalContactsInfos(List<ContactInfo> contactInfos,Context context) {
         if (contactInfos == null){
             contactInfos = new ArrayList<>();
         }
-        ContentResolver cr = MvpApp.mvpApp.getContentResolver();
+        ContentResolver cr = context.getContentResolver();
         String str[] = { Phone.CONTACT_ID, Phone.DISPLAY_NAME, Phone.NUMBER,
                 Phone.PHOTO_ID };
         Cursor cur = cr.query(
@@ -72,12 +72,12 @@ public class ContactPresenter {
 
     }
 
-    public List<ContactInfo> getSIMContactsInfos(List<ContactInfo> contactInfos) {
+    public List<ContactInfo> getSIMContactsInfos(List<ContactInfo> contactInfos,Context context) {
 //        TelephonyManager mTelephonyManager = (TelephonyManager) MvpApp.mvpApp
 //                .getSystemService(Context.TELEPHONY_SERVICE);
 
         System.out.println("---------SIM--------");
-        ContentResolver cr = MvpApp.mvpApp.getContentResolver();
+        ContentResolver cr = context.getContentResolver();
         final String SIM_URI_ADN = "content://icc/adn";// SIM卡
 
 

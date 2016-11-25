@@ -11,6 +11,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -18,9 +19,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    /*允许单元测试*/
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
     //移除lint检查的error
     lintOptions {
@@ -77,6 +82,9 @@ dependencies {
     //检查内存泄漏
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    //引入单元测试
     testCompile 'junit:junit:4.12'
+    //分包
+    compile 'com.android.support:multidex:1.0.0'
 
 }

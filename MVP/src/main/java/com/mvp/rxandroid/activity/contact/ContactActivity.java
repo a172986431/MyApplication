@@ -22,7 +22,7 @@ public class ContactActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
         presenter = new ContactPresenter();
-        presenter.getLocalContactsInfos(contactInfos,"");
+        presenter.getLocalContactsInfos(contactInfos,this);
     }
 
     public void queryContact(View view){

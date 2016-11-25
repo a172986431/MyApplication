@@ -44,6 +44,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
+ * 内存检查相关
  * <p>This class can be used to enable the use of HierarchyViewer inside an
  * application. HierarchyViewer is an Android SDK tool that can be used
  * to inspect and debug the user interface of running applications. For

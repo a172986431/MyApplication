@@ -2,6 +2,7 @@ package com.mvp.rxandroid.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 import android.view.WindowManager;
 
 import com.mvp.rxandroid.thirdparty.alimail.AlimeiSDKManager;
@@ -11,7 +12,7 @@ import com.squareup.leakcanary.RefWatcher;
 /**
  * Created by elang on 16/5/23.
  */
-public class MvpApp extends Application{
+public class MvpApp extends MultiDexApplication{
 
     public static MvpApp mvpApp;
     public static int screenWidth;
