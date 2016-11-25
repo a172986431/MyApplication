@@ -1,19 +1,19 @@
 package com.mvp.rxandroid;
 
-import android.test.AndroidTestCase;
+import android.test.InstrumentationTestCase;
 
-import com.mvp.rxandroid.activity.contact.ContactPresenter;
-import com.mvp.rxandroid.app.MvpApp;
+import junit.framework.TestCase;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertFalse;
 
 /**
  * To work on unit tests, switch the Test Artifact in the Build Variants view.
  */
-public class ExampleUnitTest extends AndroidTestCase{
+public class ExampleUnitTest {
 
     @Before
     public void appStart() throws Exception {
@@ -27,8 +27,6 @@ public class ExampleUnitTest extends AndroidTestCase{
 
     @Test
     public void con() throws Exception {
-        ContactPresenter presenter = new ContactPresenter();
-//        MvpApp.mvpApp = (MvpApp) getContext();
-        presenter.getLocalContactsInfos(null,"");
+        assertFalse("result->" + (4 > 2),4 > 2);
     }
 }
