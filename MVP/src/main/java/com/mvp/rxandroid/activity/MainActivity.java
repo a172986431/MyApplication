@@ -66,10 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
             Field field = Snackbar.class.getDeclaredField("ANIMATION_DURATION");
             setFinalStatic(field,0);
-//            Log.e("elang","Snackbar " + field.get(snackbar));
-//            Field field1 = Snackbar.class.getDeclaredField("ANIMATION_FADE_DURATION");
-//            field1.setAccessible(true);
-//            field1.set(snackbar, 10);
         } catch (Exception e) {
             e.printStackTrace();
             Log.e("elang", "field ->" + e.getMessage());
