@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         snackbarLayout.setBackgroundResource(R.drawable.toast_shape_gray_bg);
         snackbar.show();
         Intent intent = new Intent(mContext, ImageShowActivity.class);
-//        startActivity(intent);
+        startActivity(intent);
         Gson gson1 = new Gson();
         TypeAdapter<CityListBean> cityListBean = gson1.getAdapter(CityListBean.class);
         CityListBean bean = null;
