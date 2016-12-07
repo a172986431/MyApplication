@@ -39,7 +39,8 @@
                     android:scheme="cundong" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.chat.ChatActivity" />
+        <activity android:name=".activity.chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".activity.imageshow.ImageShowActivity" />
         <activity android:name=".activity.NoteBook.NoteActivity" />
         <activity android:name=".activity.ProxyActivity" />

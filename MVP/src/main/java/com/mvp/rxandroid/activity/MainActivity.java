@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public void toChatActivity(View view) {
 //        AlimeiSDKManager.test();
         Intent intent = new Intent(mContext, ChatActivity.class);
-//        startActivity(intent);
+        startActivity(intent);
         Snackbar snackbar = Snackbar.make(findViewById(R.id.toastTx), "这个是测试信息", Snackbar.LENGTH_SHORT);
         try {
 //            Class cla=Class.forName("android.support.design.widget.Snackbar");

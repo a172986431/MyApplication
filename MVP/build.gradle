@@ -52,6 +52,13 @@ android {
             dirs 'libs'
         }
     }
+
+    //运行NDK的配置
+    externalNativeBuild {
+        ndkBuild {
+            path file("src/main/jni/Android.mk")
+        }
+    }
 }
 
 dependencies {
@@ -86,5 +93,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //分包
     compile 'com.android.support:multidex:1.0.0'
-
 }
