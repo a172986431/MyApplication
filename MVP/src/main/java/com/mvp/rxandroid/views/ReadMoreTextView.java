@@ -31,7 +31,9 @@ import android.widget.TextView;
 
 import com.mvp.rxandroid.R;
 
-
+/**
+ * 可展开的文本框
+ */
 public class ReadMoreTextView extends TextView {
 
     private int mMaxLines;
