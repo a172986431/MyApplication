@@ -79,7 +79,7 @@ public class ReadMoreTextView extends TextView {
     public void setText(final CharSequence text, BufferType type) {
         mText = text;
         fixText = text.toString();
-        if (fixText.charAt(fixText.length() - 1) == '\n') {
+        if (fixText != null && fixText.length() > 0 && fixText.charAt(fixText.length() - 1) == '\n') {
             fixText = fixText.substring(0, fixText.length() - 1);
         }
         mBufferType = type;
