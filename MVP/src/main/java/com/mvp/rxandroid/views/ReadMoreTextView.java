@@ -212,7 +212,7 @@ public class ReadMoreTextView extends TextView {
     /**
      * 整理中英文混合排序提前换行的问题
      *
-     * @param line
+     * @param line 从那一行开始往下整理【排列
      */
     private void fixTextWithEnter(int line) {
         if (fixText == null) {
