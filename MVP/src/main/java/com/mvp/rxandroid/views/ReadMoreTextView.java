@@ -85,13 +85,12 @@ public class ReadMoreTextView extends TextView {
             fixText = fixText.substring(0, fixText.length() - 1);
         }
         mBufferType = type;
+        super.setText(fixText, type);
         if (summary == null || getLayout() == null) {
             setup();
-            super.setText(fixText, type);
         } else {
             fixTextWithEnter(0);
             if (getLineCount() <= mMaxLines) {
-                super.setText(fixText, type);
                 return;
             }
             summary = createSummary();
