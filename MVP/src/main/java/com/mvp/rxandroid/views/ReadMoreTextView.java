@@ -91,6 +91,7 @@ public class ReadMoreTextView extends TextView {
         } else {
             fixTextWithEnter(0);
             if (getLineCount() <= mMaxLines) {
+                summary = fixText;
                 return;
             }
             summary = createSummary();
