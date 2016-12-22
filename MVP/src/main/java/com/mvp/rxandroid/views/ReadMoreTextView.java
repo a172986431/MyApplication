@@ -23,6 +23,8 @@ public class ReadMoreTextView extends TextView {
     private CharSequence mText;
     //用来整理中英文混编
     private String fixText;
+    //限制行数后的文本
+    private CharSequence summary;
     private String mMoreText;
     private String mLessText;
     private int mMoreColor;
@@ -83,8 +85,19 @@ public class ReadMoreTextView extends TextView {
             fixText = fixText.substring(0, fixText.length() - 1);
         }
         mBufferType = type;
-        setup();
-        super.setText(fixText, type);
+        if (summary == null || getLayout() == null) {
+            setup();
+            super.setText(fixText, type);
+        } else {
+            fixTextWithEnter(0);
+            if (getLineCount() <= mMaxLines) {
+                super.setText(fixText, type);
+                return;
+            }
+            summary = createSummary();
+            setTextInternal(summary);
+            setOnClickListener(new OnClick(summary));
+        }
     }
 
     @Override
@@ -109,19 +122,12 @@ public class ReadMoreTextView extends TextView {
                 return;
             }
 
-            final CharSequence summary = createSummary();
+            summary = createSummary();
             setTextInternal(summary);
             setOnClickListener(new OnClick(summary));
         }
     };
 
-    /**
-     * 给添加的字段设置颜色
-     * @param content 文本的字段
-     * @param label 新添加的字段
-     * @param color 新添加字段的颜色
-     * @return
-     */
     private Spanned create(CharSequence content, String label, int color) {
         SpannableStringBuilder builder = new SpannableStringBuilder(label);
         builder.setSpan(new ForegroundColorSpan(color), 0, label.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -212,7 +218,7 @@ public class ReadMoreTextView extends TextView {
     /**
      * 整理中英文混合排序提前换行的问题
      *
-     * @param line 从那一行开始往下整理【排列
+     * @param line
      */
     private void fixTextWithEnter(int line) {
         if (fixText == null) {
@@ -226,7 +232,6 @@ public class ReadMoreTextView extends TextView {
         try {
             String content = fixText.substring(start, end);
             int len = getPaint().breakText(fixText, start, fixText.length(), true, layout.getWidth(), null);
-            //判断如果提前换行了则加换行符进行截断
             if (content.contains("\n") || len == end - start) {
             } else {
                 sb.insert(start + len, "\n");
