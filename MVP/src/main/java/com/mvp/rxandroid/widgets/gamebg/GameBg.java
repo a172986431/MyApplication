@@ -26,8 +26,6 @@ public class GameBg {
    bg2y = bg1y - bmpBackGround1.getHeight() + 50;
    bg1x = 0;
    bg2x = 0;
-
-
   }else {
    bg1x = -Math.abs(bmpBackGround.getWidth() - GameMoveBg.screenW);
    bg2x = bg1x - bmpBackGround1.getWidth() + 3;
